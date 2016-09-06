@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driverClassName: org.sqlite.JDBC
+    url: jdbc:sqlite:person_db.sqlite
+    username:
+    password:
+  jpa:
+    database-platform: io.github.mattn.sbbatch.config.SQLiteDialect
+    hibernate.ddl-auto: update
+    show-sql: true
