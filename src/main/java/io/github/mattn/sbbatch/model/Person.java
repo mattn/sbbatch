@@ -5,7 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 
 /**
- * Created by mattn on 2016/09/07.
+ * Person holds first-name and last-name.
+ *
+ * @author mattn
  */
 @Data
 @Entity

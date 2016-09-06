@@ -11,7 +11,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 /**
- * Created by mattn on 2016/09/07.
+ * Application is main entry point.
+ * @author mattn
  */
 @EnableAutoConfiguration
 @EnableBatchProcessing
@@ -21,6 +22,10 @@ public class Application implements CommandLineRunner {
     @Autowired
     private PersonRepository personRepository;
 
+    /***
+     * main is startup.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
         application.setWebEnvironment(false);
@@ -29,6 +34,9 @@ public class Application implements CommandLineRunner {
     }
 
     @Override
+    /**
+     * worker handler.
+     */
     public void run(String... strings) throws Exception {
         log.debug("hello");
 
